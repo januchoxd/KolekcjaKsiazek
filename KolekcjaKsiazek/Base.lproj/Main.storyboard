@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u8l-n2-OOX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="KolekcjaKsiazek" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,122 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="47k-MB-oHt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="47k-MB-oHt" secondAttribute="bottom" id="4js-VO-JWJ"/>
+                            <constraint firstItem="47k-MB-oHt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Tg-Rj-7p5"/>
+                            <constraint firstAttribute="trailing" secondItem="47k-MB-oHt" secondAttribute="trailing" id="9tg-PE-4iW"/>
+                            <constraint firstItem="47k-MB-oHt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v4F-Ne-xBI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2Hi-yc-9aP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iLU-oq-ElW">
+                            <connections>
+                                <segue destination="WRo-VE-fs3" kind="show" id="IxI-9w-85m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="47k-MB-oHt" id="KS7-4J-B1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--Ksiazka View Controller-->
+        <scene sceneID="AjG-r8-Fup">
+            <objects>
+                <viewController id="WRo-VE-fs3" customClass="KsiazkaViewController" customModule="KolekcjaKsiazek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Eg-tt-8DC"/>
+                        <viewControllerLayoutGuide type="bottom" id="p6a-MO-rwP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wu0-Rf-eYb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foka.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Th7-qY-cV2">
+                                <rect key="frame" x="47" y="84" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="SI6-SZ-rV2"/>
+                                    <constraint firstAttribute="width" constant="280" id="YhB-Fu-efx"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nazwa ksiazki" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-pb-n7Q">
+                                <rect key="frame" x="47.5" y="254" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkJ-xs-LW0">
+                                <rect key="frame" x="164" y="334" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dodajButton:" destination="WRo-VE-fs3" eventType="touchUpInside" id="7qH-84-eOc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c8D-pb-n7Q" firstAttribute="width" secondItem="Th7-qY-cV2" secondAttribute="width" id="JCK-cK-euQ"/>
+                            <constraint firstItem="pkJ-xs-LW0" firstAttribute="top" secondItem="c8D-pb-n7Q" secondAttribute="bottom" constant="50" id="ORg-KI-tb2"/>
+                            <constraint firstItem="c8D-pb-n7Q" firstAttribute="centerX" secondItem="Wu0-Rf-eYb" secondAttribute="centerX" id="Oql-zQ-8ZX"/>
+                            <constraint firstItem="pkJ-xs-LW0" firstAttribute="centerX" secondItem="Wu0-Rf-eYb" secondAttribute="centerX" id="Pj4-o7-73A"/>
+                            <constraint firstItem="c8D-pb-n7Q" firstAttribute="top" secondItem="Th7-qY-cV2" secondAttribute="bottom" constant="20" id="jbw-UW-Ucj"/>
+                            <constraint firstItem="Th7-qY-cV2" firstAttribute="top" secondItem="2Eg-tt-8DC" secondAttribute="bottom" constant="20" id="tbr-IE-hVg"/>
+                            <constraint firstItem="Th7-qY-cV2" firstAttribute="centerX" secondItem="Wu0-Rf-eYb" secondAttribute="centerX" id="xLr-il-XOS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MqY-XS-V4s">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="dCb-hV-ial">
+                                <connections>
+                                    <action selector="photosTapped:" destination="WRo-VE-fs3" id="OSJ-qR-E2Z"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Zdjecia" id="V8O-Y6-8LN">
+                                <connections>
+                                    <action selector="bibliotekaTapped:" destination="WRo-VE-fs3" id="hRV-KP-oHX"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nazwaKsiazki" destination="c8D-pb-n7Q" id="J6E-g2-wEf"/>
+                        <outlet property="obrazek" destination="Th7-qY-cV2" id="vCs-5I-rbz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9h-6e-jPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7FI-to-SBw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u8l-n2-OOX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UFb-hp-NKr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S58-j7-h6w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mC4-wX-OCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="foka.jpg" width="400" height="205"/>
+    </resources>
 </document>

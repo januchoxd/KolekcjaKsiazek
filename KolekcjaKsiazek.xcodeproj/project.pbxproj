@@ -13,6 +13,8 @@
 		244B4C511E52A13D00626712 /* KolekcjaKsiazek.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 244B4C4F1E52A13D00626712 /* KolekcjaKsiazek.xcdatamodeld */; };
 		244B4C531E52A13D00626712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244B4C521E52A13D00626712 /* Assets.xcassets */; };
 		244B4C561E52A13D00626712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244B4C541E52A13D00626712 /* LaunchScreen.storyboard */; };
+		244B4C5E1E52A4EA00626712 /* foka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 244B4C5D1E52A4EA00626712 /* foka.jpg */; };
+		244B4C601E52A5F800626712 /* KsiazkaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B4C5F1E52A5F800626712 /* KsiazkaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		244B4C521E52A13D00626712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244B4C551E52A13D00626712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		244B4C571E52A13D00626712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		244B4C5D1E52A4EA00626712 /* foka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foka.jpg; sourceTree = "<group>"; };
+		244B4C5F1E52A5F800626712 /* KsiazkaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KsiazkaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		244B4C471E52A13D00626712 /* KolekcjaKsiazek */ = {
 			isa = PBXGroup;
 			children = (
+				244B4C5D1E52A4EA00626712 /* foka.jpg */,
 				244B4C481E52A13D00626712 /* AppDelegate.swift */,
 				244B4C4A1E52A13D00626712 /* ViewController.swift */,
+				244B4C5F1E52A5F800626712 /* KsiazkaViewController.swift */,
 				244B4C4C1E52A13D00626712 /* Main.storyboard */,
 				244B4C521E52A13D00626712 /* Assets.xcassets */,
 				244B4C541E52A13D00626712 /* LaunchScreen.storyboard */,
@@ -129,6 +135,7 @@
 			files = (
 				244B4C561E52A13D00626712 /* LaunchScreen.storyboard in Resources */,
 				244B4C531E52A13D00626712 /* Assets.xcassets in Resources */,
+				244B4C5E1E52A4EA00626712 /* foka.jpg in Resources */,
 				244B4C4E1E52A13D00626712 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +150,7 @@
 				244B4C4B1E52A13D00626712 /* ViewController.swift in Sources */,
 				244B4C491E52A13D00626712 /* AppDelegate.swift in Sources */,
 				244B4C511E52A13D00626712 /* KolekcjaKsiazek.xcdatamodeld in Sources */,
+				244B4C601E52A5F800626712 /* KsiazkaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
