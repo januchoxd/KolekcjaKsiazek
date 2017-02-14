@@ -44,5 +44,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ksiazka = ksiazki[indexPath.row]
+        performSegue(withIdentifier: "ksiazkaSegue", sender: ksiazka)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! KsiazkaViewController
+        nextVC.ksiazka = sender as? Ksiazka
+    }
+    
+    
 }
 

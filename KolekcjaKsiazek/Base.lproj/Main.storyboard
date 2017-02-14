@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="2Hi-yc-9aP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iLU-oq-ElW">
                             <connections>
-                                <segue destination="WRo-VE-fs3" kind="show" id="IxI-9w-85m"/>
+                                <segue destination="WRo-VE-fs3" kind="show" identifier="ksiazkaSegue" id="IxI-9w-85m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,20 +76,30 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkJ-xs-LW0">
-                                <rect key="frame" x="164" y="334" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="167" y="334" width="40" height="30"/>
+                                <state key="normal" title="Dodaj"/>
                                 <connections>
                                     <action selector="dodajButton:" destination="WRo-VE-fs3" eventType="touchUpInside" id="7qH-84-eOc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM9-GT-9Ab">
+                                <rect key="frame" x="169" y="384" width="36" height="30"/>
+                                <state key="normal" title="Usuń"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="WRo-VE-fs3" eventType="touchUpInside" id="T7m-Je-4tz"/>
+                                    <action selector="dodajButton:" destination="WRo-VE-fs3" eventType="touchUpInside" id="Dmk-m4-h1m"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="c8D-pb-n7Q" firstAttribute="width" secondItem="Th7-qY-cV2" secondAttribute="width" id="JCK-cK-euQ"/>
+                            <constraint firstItem="KM9-GT-9Ab" firstAttribute="centerX" secondItem="Wu0-Rf-eYb" secondAttribute="centerX" id="O0U-wg-3hm"/>
                             <constraint firstItem="pkJ-xs-LW0" firstAttribute="top" secondItem="c8D-pb-n7Q" secondAttribute="bottom" constant="50" id="ORg-KI-tb2"/>
                             <constraint firstItem="c8D-pb-n7Q" firstAttribute="centerX" secondItem="Wu0-Rf-eYb" secondAttribute="centerX" id="Oql-zQ-8ZX"/>
                             <constraint firstItem="pkJ-xs-LW0" firstAttribute="centerX" secondItem="Wu0-Rf-eYb" secondAttribute="centerX" id="Pj4-o7-73A"/>
                             <constraint firstItem="c8D-pb-n7Q" firstAttribute="top" secondItem="Th7-qY-cV2" secondAttribute="bottom" constant="20" id="jbw-UW-Ucj"/>
+                            <constraint firstItem="KM9-GT-9Ab" firstAttribute="top" secondItem="pkJ-xs-LW0" secondAttribute="bottom" constant="20" id="khB-ca-LbP"/>
                             <constraint firstItem="Th7-qY-cV2" firstAttribute="top" secondItem="2Eg-tt-8DC" secondAttribute="bottom" constant="20" id="tbr-IE-hVg"/>
                             <constraint firstItem="Th7-qY-cV2" firstAttribute="centerX" secondItem="Wu0-Rf-eYb" secondAttribute="centerX" id="xLr-il-XOS"/>
                         </constraints>
@@ -109,6 +119,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButtonOutlet" destination="KM9-GT-9Ab" id="H2H-Dl-G2v"/>
+                        <outlet property="dodajButtonOutlet" destination="pkJ-xs-LW0" id="Eys-V9-KwN"/>
                         <outlet property="nazwaKsiazki" destination="c8D-pb-n7Q" id="J6E-g2-wEf"/>
                         <outlet property="obrazek" destination="Th7-qY-cV2" id="vCs-5I-rbz"/>
                     </connections>

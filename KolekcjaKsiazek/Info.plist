@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Potrzebujemy dostepu by zrobic nowe zdjecie ksiazki :)</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Potrzebuję twoich obecnych zdjęć ksiazek, abys nie musiał robić nowych zdjęć</string>
+	<string>Potrzebuję twoich obecnych zdjęć ksiazek, abys nie musiał robić nowych zdjęć :)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
